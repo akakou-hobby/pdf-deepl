@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://andybrewer.github.io/mvp/mvp.css" />
+</head>
+
+<body>
+  <main>
+    <h2></h2>
+
+    <form action='/' method='post'>
+      <label for='content'>整形したい内容</label>
+      <textarea id='content'></textarea>
+
+      <input type='button' value='実行' onclick='run()'></input>
+    </form>
+  </main>
+
+  <style>
+  textarea {
+    width: 95%;
+    height: 150px;
+  }
+  </style>
+
+  <script>
+  const run = () => {
+    const element = document.getElementById("content");
+    element.value = element.value.split("\n").join(" ").split(".").join(".\n");
+  };
+</script>
+
+</body>
+</html>
