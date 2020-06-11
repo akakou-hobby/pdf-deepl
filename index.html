@@ -18,16 +18,20 @@
 
       <input type='button' value='実行' onclick='run()'></input>
     </form>
+
   </main>
 
   <style>
   textarea {
     width: 95%;
-    height: 150px;
+    height: 300px;
   }
   </style>
 
+
   <script>
+  const DEEPL_URL = 'https://www.deepl.com/ja/translator#en/ja/';
+
   const run = () => {
     const element = document.getElementById("content");
     element.value = element.value
@@ -35,7 +39,11 @@
                         .join(" ")
                         .split(". ")
                         .join(".\n");
+
+    
+    window.open(DEEPL_URL + encodeURIComponent(element.value));
   };
+
 </script>
 
 </body>
