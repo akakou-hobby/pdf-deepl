@@ -30,7 +30,11 @@
   <script>
   const run = () => {
     const element = document.getElementById("content");
-    element.value = element.value.split("\n").join(" ").split(".").join(".\n");
+    element.value = element.value
+                        .split("\n")
+                        .join(" ")
+                        .split(". ")
+                        .join(".\n");
   };
 </script>
 
